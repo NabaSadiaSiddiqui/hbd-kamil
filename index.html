@@ -1,0 +1,269 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style>
+            body {
+                background-color: #FFDAB9;
+            }
+
+            section {
+                padding: 50px;
+            }
+
+            @keyframes zoominoutsinglefeatured {
+                0% {
+                    transform: scale(1,1);
+                }
+                50% {
+                    transform: scale(1.2,1.2);
+                }
+                100% {
+                    transform: scale(1,1);
+                }
+            }
+
+            @-webkit-keyframes colorchange {
+                0% {
+                    color: #FF8C00;
+                }
+                10% {
+                    color: #FF0000;
+                }
+                20% {
+                    color: #00FF00;
+                }
+                30% {
+                    color:#4169E1;
+                }
+                40% {
+                    color:#FF00FF;
+                }
+                50% {
+                    color: #FF8C00;
+                }
+                60% {
+                    color: #FF0000;
+                }
+                70% {
+                    color: #00FF00;
+                }
+                80% {
+                    color:#00FFFF;
+                }
+                90% {
+                    color:#FF00FF;
+                }
+                100% {  
+                    color: #4169E1;
+                }
+            }
+
+            .imgcontainer {
+                margin: auto;
+                width: 50%;
+            }
+
+            .imgcontainer img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                animation: zoominoutsinglefeatured 1s;
+            }
+
+            .birthday-msg p {
+                font-size: 50pt;
+                text-align: center;
+                color: #FF8C00;
+                font-family: monospace;
+                -webkit-animation:colorchange 20s infinite 
+            }
+
+            #section_2 p {
+                font-size: 25pt;
+                font-family: monospace;
+                color: #4169E1;
+            }
+
+            #section_3 p {
+                font-size: 25pt;
+                font-family: monospace;
+                color: #4169E1;
+            }
+
+            #section_3 li {
+                font-size: 20pt;
+                font-family: monospace;
+                color: #4169E1;
+            }
+
+            #section_4 p {
+                font-size: 20pt;
+                font-family: monospace;
+                color: #4169E1;
+                text-align: center;
+            }
+
+            .kamil-container {
+                margin: auto;
+                width: 50%;
+            }
+
+            .kamil-container img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                height: 300px;
+            }
+
+            #fun-facts p, ul {
+                font-size: 15pt;
+                font-family: monospace;
+                color: #4169E1;
+                text-align: left;
+            }
+        </style>
+        <script>
+            var active = 1;
+            var item = 1;
+
+            function init() {
+                $('#section_2').hide();
+                $('#section_3').hide();
+                $('#section_4').hide();
+                $('#item_1').hide();
+                $('#item_2').hide();
+                $('#item_3').hide();
+                $('#item_4').hide();
+                $('#item_5').hide();
+                $('#item_6').hide();
+                $('#item_7').hide();
+                $('#item_8').hide();
+                $('#item_9').hide();
+                $('#item_10').hide();
+                $('#item_11').hide();
+                $('#item_12').hide();
+                $('#item_13').hide();
+                $('#item_14').hide();
+            }
+
+            function hideAll() {
+                $('#section_1').hide();
+                $('#section_2').hide();
+                $('#section_3').hide();
+                $('#section_4').hide();
+            }
+
+            function onNext() {
+                if(active != 4) {
+                    if(active == 3) {
+                        if(item == 15) {
+                            item = 1;
+                            hideAll();
+                            active = active + 1;
+                            $('#section_' + active).show();
+                        } else {
+                            $('#item_' + item).show();
+                            item = item + 1;
+                        }
+                    } else {
+                        hideAll();
+                        active = active + 1;
+                        $('#section_' + active).show();
+                    }
+                } else {
+                    hideAll();
+                    $('#section_4').show();
+                }
+            }
+
+            function onPrev() {
+                hideAll();
+                if(active != 1) {
+                    active = active - 1;
+                    $('#section_' + active).show();
+                    if(active == 3) {
+                        item = 14;
+                    }
+                } else {
+                    $('#section_1').show();
+                }
+            }
+
+            document.addEventListener("keydown", function(event) {
+                if([38, 39].includes(event.which)) {
+                    onNext();
+                } else if([37, 40].includes(event.which)) {
+                    onPrev();
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <section id="section_1">
+            <div class="imgcontainer">
+                <img src="https://firebasestorage.googleapis.com/v0/b/hbd-kamil.appspot.com/o/muffin.png?alt=media" alt="Happy Birthday">
+            </div>
+            <div class="birthday-msg">
+                <p>Happy 27<sup>th</sup> Birthday, Kamil!</p>
+            </div>
+        </section>
+        <section id="section_2">
+            <p>HAPPY BIRTHDAY KAMIL! &#x1F389; &#x1F382; &#x1F600; &#x1F49C; &#x1F381;</p>
+            <p>
+                I really wanted to wish you in person, but we are living in COVID-19 times. Social distancing and all that.
+                But I still wanted to do something special for you on your birthday. So I thought of immortalizing your birthday in Internet history.
+                I HATE making websites, so this is truly special and only for you.
+            </p>
+            <p>
+                You always complain that I am very critical of you, and have nothing nice to say about you. So I thought I will also take this day
+                to list 27 amazing things about Kamil Shafiq (&#x1F92E;).
+            </p>
+            <p>
+                So here goes...
+            </p>
+        </section>
+        <section id="section_3">
+            <p><u>27 Amazing Things About Kamil Shafiq</u></p>
+            <ol>
+                <li id="item_1">You are one of the most handsome men I know (you should still get a hair cut)</li>
+                <li id="item_2">You are incredibly smart. You changed my (typical brown) perspective on people with a "non-science" background</li>
+                <li id="item_3">You are kind and sweet</li>
+                <li id="item_4">You are just incredibly creative. I sometimes feel stupid when my neurons fail to generate ideas the way you do</li>
+                <li id="item_5">You are extremely hard-working. But I am still on the fence about whether this is something that is good about you or bad and needs to change</li>
+                <li id="item_6">You put others before yourself. The way you were thinking about James and getting him out of Lagos and not yourself - I won't have been able to do that</li>
+                <li id="item_7">You are funny (I think)</li>
+                <li id="item_8">You are persistent. This can be annoying too though</li>
+                <li id="item_9">You are sensitive</li>
+                <li id="item_10">You are eloquent</li>
+                <li id="item_11">You know a thing or two about money. But I may find this really impressive about you because I know ZERO about $$$ so...</li>
+                <li id="item_12">You are caring. You care about your family, your friends, people you work with, your cat</li>
+                <li id="item_13">You love cats, which I think is cute lol</li>
+                <li id="item_14">You <i>supposedly</i> cook. I can't be sure till I see it for myself so I am just going by your Snapchat and Instagram here...</li>
+            </ol>
+        </section>
+        <section id="section_4">
+            <p>We both know there was absolutely NO way I could have come up with <b>27</b> nice things to say about you. Coming up with even 14 took me forever!!!</p>
+            <p>That said, have a great birthday! You deserve nothing less than best, and I wish that you have an incredible year.</p>
+            <p>&#x1F497; &#x1F497; &#x1F497;</p>
+            <div class="kamil-container">
+                <img src="https://firebasestorage.googleapis.com/v0/b/hbd-kamil.appspot.com/o/kamil.jpeg?alt=media" alt="Kamil">
+            </div>
+            <hr style="margin-top: 50px;">
+            <div id="fun-facts">
+                <p>Fun Facts:</p>
+                <ul>
+                    <li>This is a Single Page Application</li>
+                    <li>It was created using only HTML5 and CSS3</li>
+                    <li>It is hosted on Firebase</li>
+                    <li>It took me ~3 hours to create this, and my rate is $150. So this was a rather expensive present for someone who wants to meet up after 10 years &#x1F612;</li>
+                </ul>
+                <p style="color:red; font-size: 15px"><u>P.S. I don't trust you to take appropriate cautionary measures when recieivng an Amazon delivery, so to err on the side of caution, you will have to wait till the end of COVID-19 for an actual gift from me (hint: it will likely be a dozen cookies from Subway).</u></p>
+            </div>
+        </section>
+        <script>
+            init();
+        </script>
+    </body>
+</html>
